@@ -10,7 +10,7 @@ A NestJs server-side application that allow users to upload a file to the server
 The application containerized with proper docker file .
 
 ## Requirements
-[√] create base project
+[√] 
 [√] add module for media (uploading/downloading) 
 [√] add controller, routes for file uploading 
 [√] add config module + .env file
@@ -22,6 +22,15 @@ The application containerized with proper docker file .
 [√] create docker file
 [] add unite tests
 [] add swagger documantation  
+- [ ] create base project
+- [x] Venus
+- [x] Earth (Orbit/Moon)
+- [x] Mars
+- [ ] Jupiter
+- [ ] Saturn
+- [ ] Uranus
+- [ ] Neptune
+- [ ] Comet Haley
 ## Running the app without docker
 
 ```bash
