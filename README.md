@@ -1,36 +1,31 @@
+
+## Description
+
+A NestJs server-side application that allow users to upload a file to the server, the users should be able to share a URL of uploaded file, however this URL should expire after a variable duration, the application should validate the file type and should only accept the following: (▪ PDF ▪ PNG ▪ JPG)
+The application containerized with proper docker file .
+
+## The Architecture Design 
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://github.com/mohamedlotfe/files-uploader-nestjs/blob/main/public/service-diagram.drawio.png"  alt="Nest Logo" /></a>
 </p>
 
 
-
-## Description
-
-A NestJs server-side application that allow users to upload a file to the server, the users should be able to share a URL of uploaded file, however this URL should expire after a variable duration, the application should validate the file type and should only accept the following: ▪ PDF ▪ PNG ▪ JPG
-The application containerized with proper docker file .
-
 ## Requirements
-[√] 
-[√] add module for media (uploading/downloading) 
-[√] add controller, routes for file uploading 
-[√] add config module + .env file
-[√] create GCP project + create storage bucket +use credentials
-[√] add GCP Module 
-[√] add saving and retrieving functionality from GCP
-[√] add cache Interceptor to route  
-[√] add Authentication  
-[√] create docker file
-[] add unite tests
-[] add swagger documantation  
-- [ ] create base project
-- [x] Venus
-- [x] Earth (Orbit/Moon)
-- [x] Mars
-- [ ] Jupiter
-- [ ] Saturn
-- [ ] Uranus
-- [ ] Neptune
-- [ ] Comet Haley
+ 
+- [x] Create base project
+- [x] Add module for media (uploading/downloading)
+- [x] Add controller, routes for file uploading 
+- [x] Add config module + .env file
+- [x] Create GCP project + create storage bucket
+- [x] Use GCP credentials + add GCP Module
+- [x] Add saving and retrieving functionality from GCP
+- [x] Add cache Interceptor to route  
+- [x] Add Authentication (JwtStrategy => PassportStrategy)
+- [x] Apply Guards
+- [x] Create docker file
+- [x] Attach Postman collection here
+
 ## Running the app without docker
 
 ```bash
