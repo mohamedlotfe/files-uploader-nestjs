@@ -34,7 +34,7 @@ Done? | Requirement
 ✅| Add Authentication (JwtStrategy => PassportStrategy)
 ✅| Apply Authentication Guards
 ✅| Create docker file
-✅| Attach Postman collection here
+✅| Attach Postman collection [here](https://github.com/mohamedlotfe/files-uploader-nestjs/blob/main/public/latest-files-uploader-nest.postman_collection.json) 
 ⬜️| add swagger documentation  
 
 ## Running the app without docker
