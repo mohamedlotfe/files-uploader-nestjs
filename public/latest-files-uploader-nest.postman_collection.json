@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "b3251fbb-77fe-4310-8c68-5b4112b9fccc",
+		"name": "files-uploader-nest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2585636"
+	},
+	"item": [
+		{
+			"name": "1- user login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"one\",\n    \"password\": \"one111\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2- upload media (PDF ▪ PNG ▪ JPG)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo1LCJuYW1lIjoib25lIiwidXNlcm5hbWUiOiJvbmUiLCJlbWFpbCI6Im9uZUBvbmUuY29tIiwicHJvZmlsZUltZyI6bnVsbCwicm9sZSI6InVzZXIifSwiaWF0IjoxNjcyMzAxODYzLCJleHAiOjE2NzIzMTE4NjN9.WgDcpTi_EHTuwN1kIqxiHCj5ZyrT7WtTtGUrGSHXsnw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/molotfy/Documents/IMG_20220405_101910.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3- get signed media URL",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo1LCJuYW1lIjoib25lIiwidXNlcm5hbWUiOiJvbmUiLCJlbWFpbCI6Im9uZUBvbmUuY29tIiwicHJvZmlsZUltZyI6IjAxMGJjODIwOTc5OGZhNDQ5ODcyOTJlN2MxNzMxOWYxMDguanBnIiwicm9sZSI6InVzZXIifSwiaWF0IjoxNjcyMzA1NDE3LCJleHAiOjE2NzIzMTU0MTd9.dyHcsphotRqr6V5JEcmc2FHLAtSaKgjeSFrGAOHRGSU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/media/url/d8bb5610f993a1064f9b0b12c3094d4c7f.png",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"media",
+						"url",
+						"d8bb5610f993a1064f9b0b12c3094d4c7f.png"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4- Download media",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo1LCJuYW1lIjoib25lIiwidXNlcm5hbWUiOiJvbmUiLCJlbWFpbCI6Im9uZUBvbmUuY29tIiwicHJvZmlsZUltZyI6IjAxMGJjODIwOTc5OGZhNDQ5ODcyOTJlN2MxNzMxOWYxMDguanBnIiwicm9sZSI6InVzZXIifSwiaWF0IjoxNjcyMzA1NDE3LCJleHAiOjE2NzIzMTU0MTd9.dyHcsphotRqr6V5JEcmc2FHLAtSaKgjeSFrGAOHRGSU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"src": "/Users/molotfy/Downloads/levasyl.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/media/download/a2e49910e9e3e0cf10eee66894f10a7245a.png",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"media",
+						"download",
+						"a2e49910e9e3e0cf10eee66894f10a7245a.png"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
